@@ -56,11 +56,8 @@ def process_extracted_data(data):
                 max_value = float(cleaned_data[prev_max_index][prev_max_key].replace(",", "."))
                 min_value = float(cleaned_value)
 
-                logger.info(f'Key: {key}\nmax: {max_value}\nmin: {min_value}')
-
                 # Compute average
                 avg_value = round((max_value + min_value) / 2, 1)
-                logger.info(f'Avg: {avg_value}')
 
                 # Convert back to proper string format with ','
                 avg_value_str = str(avg_value).replace(".", ",")
